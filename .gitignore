@@ -1,0 +1,27 @@
+# Swift Package Manager
+.build/
+.swiftpm/*
+.swiftpm/xcode/*
+!.swiftpm/xcode/
+!.swiftpm/xcode/xcshareddata/
+/build
+/artifacts
+
+# Xcode
+DerivedData/
+xcuserdata/
+*.xcworkspace
+*.xcodeproj
+
+# Swift PM specific
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary Files
+*.swp
+*.swo
