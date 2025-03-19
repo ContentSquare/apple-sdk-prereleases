@@ -30,17 +30,17 @@ let package = Package(
         .target(
             name: "__Contentsquare",
             dependencies: [
-                "Contentsquare",
-                "HeapContentsquareIntegrationSDK",
-                "HeapIOSAutocapture",
-                "HeapNotificationAutocapture",
-                "HeapSwiftCore",
+                .product(name: "ContentsquareModule", package: "CS_iOS_SDK"),
+                .product(name: "HeapContentsquareIntegrationSDK", package: "heap-ios-cs-integration-sdk"),
+                .product(name: "HeapIOSAutocapture", package: "heap-ios-autocapture-sdk"),
+                .product(name: "HeapNotificationAutocapture", package: "heap-notification-autocapture-sdk"),
+                .product(name: "HeapSwiftCore", package: "heap-swift-core-sdk"),
             ]
         ),
         .binaryTarget(
             name: "Contentsquare",
-            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/0.0.100/package.zip",
-            checksum: "19e90a6daf06fcd3b98b25a7ce037a89d8236abfcb52a3b789529b625b737236"
+            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/0.0.101-rc.1/package.zip",
+            checksum: "87b7b5b26e68cc4888c0a0000c718bf270649ff60ec147093d2949444555a0af"
         ),
     ],
     swiftLanguageVersions: [.v5]
