@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Contentsquare",
+    name: "ContentsquareSDK",
     platforms: [
         .macOS(.v11),
         .iOS(.v13),
@@ -12,11 +12,10 @@ let package = Package(
         .tvOS(.v13),
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Contentsquare",
+            name: "ContentsquareSDK",
             targets: [
-                "__Contentsquare"
+                "__ContentsquareSDK"
             ]),
     ],
     dependencies: [
@@ -28,19 +27,20 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "__Contentsquare",
+            name: "__ContentsquareSDK",
             dependencies: [
-                "Contentsquare",
-                "HeapContentsquareIntegrationSDK",
-                "HeapIOSAutocapture",
-                "HeapNotificationAutocapture",
-                "HeapSwiftCore",
+                .product(name: "ContentsquareSDK", package: "ContentsquareSDK"),
+                .product(name: "ContentsquareModule", package: "CS_iOS_SDK"),
+                .product(name: "HeapContentsquareIntegrationSDK", package: "heap-ios-cs-integration-sdk"),
+                .product(name: "HeapIOSAutocapture", package: "heap-ios-autocapture-sdk"),
+                .product(name: "HeapNotificationAutocapture", package: "heap-notification-autocapture-sdk"),
+                .product(name: "HeapSwiftCore", package: "heap-swift-core-sdk"),
             ]
         ),
         .binaryTarget(
-            name: "Contentsquare",
-            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/0.0.100/package.zip",
-            checksum: "19e90a6daf06fcd3b98b25a7ce037a89d8236abfcb52a3b789529b625b737236"
+            name: "ContentsquareSDK",
+            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/0.0.101-rc.6/package.zip",
+            checksum: "63c8d1ae9a55f3b100758d1eb26ce0c3e96ada44edaf47856c34a7daf22e2d99"
         ),
     ],
     swiftLanguageVersions: [.v5]
