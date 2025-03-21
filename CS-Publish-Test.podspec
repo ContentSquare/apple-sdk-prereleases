@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name = 'CS-Publish-Test'
-    s.module_name = 'Contentsquare'
-    s.header_dir = 'Contentsquare'
-    s.version = '0.0.100'
+    s.module_name = 'ContentsquareSDK'
+    s.header_dir = 'ContentsquareSDK'
+    s.version = '0.0.101'
     s.summary = 'Contentsquare iOS SDK'
     s.homepage = 'https://docs.contentsquare.com/ios'
     s.author = { 'Contentsquare' => 'contact@contentsquare.com' }
