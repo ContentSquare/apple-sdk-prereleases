@@ -6,10 +6,7 @@ import PackageDescription
 let package = Package(
     name: "ContentsquareSDK",
     platforms: [
-        .macOS(.v11),
         .iOS(.v13),
-        .watchOS(.v6),
-        .tvOS(.v13),
     ],
     products: [
         .library(
@@ -39,8 +36,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ContentsquareSDK",
-            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/0.0.101/package.zip",
-            checksum: "03a07c1ea154f0f4307cabf06bd9f0e0b3bb6a453603d35f74041aa0f061e291"
+            url: "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/1.0.0-rc.19/package.zip",
+            checksum: "cb8d52053fee4916a2e18be086a1855784cad52ab9b09924f3a2e5b29a215a02"
         ),
     ],
     swiftLanguageVersions: [.v5]
