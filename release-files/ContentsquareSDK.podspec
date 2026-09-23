@@ -1,12 +1,10 @@
 Pod::Spec.new do |s|
-    s.name = 'CS-Publish-Test'
-    s.module_name = 'ContentsquareSDK'
-    s.header_dir = 'ContentsquareSDK'
-    s.version = '0.0.101'
+    s.name = 'ContentsquareSDK'
+    s.version = '1.12.5'
     s.summary = 'Contentsquare iOS SDK'
     s.homepage = 'https://docs.contentsquare.com/ios'
     s.author = { 'Contentsquare' => 'contact@contentsquare.com' }
-    s.source = { :http => "https://github.com/ContentSquare/apple-sdk-prereleases/releases/download/#{s.version}/package.zip", :type => 'zip' }
+    s.source = { :http => "https://github.com/ContentSquare/apple-sdk/releases/download/#{s.version}/package.zip", :type => 'zip' }
     s.license = { :type => 'COMMERCIAL', :text => <<-LICENSE
                     The Content Square iOS SDK License 1.0
                         (c) Content Square SAS 2023
@@ -27,17 +25,15 @@ Pod::Spec.new do |s|
     LICENSE
     }
     s.swift_version = '5.1'
+    s.platform = :ios
     s.ios.deployment_target = '13.0'
-    s.osx.deployment_target = '11.0'
-    s.tvos.deployment_target = '13.0'
+    s.ios.vendored_frameworks = 'ContentsquareSDK.xcframework'
     s.requires_arc = true
     s.cocoapods_version = '>= 1.7.0'
-
-    s.static_framework = true
-   
-    s.ios.dependency 'CS_iOS_SDK_STATIC', '4.40.0'
-    s.dependency 'HeapSwiftCore', '0.8.0'
-    s.ios.dependency 'HeapContentsquareIntegrationSDK_static', '0.8.0'
-    s.ios.dependency 'HeapIOSAutocapture', '0.8.0'
-    s.ios.dependency 'HeapNotificationAutocapture', '0.8.0'
+  
+    s.ios.dependency 'CS_iOS_SDK', '4.53.0-alpha.18'
+    s.ios.dependency 'ContentsquareCore', '0.2.1-alpha.3'
+    s.ios.dependency 'HeapSwiftCore', '0.9.2'
+    s.ios.dependency 'HeapIOSAutocapture', '0.10.3'
+    s.ios.dependency 'HeapNotificationAutocapture', '0.8.3'
 end
